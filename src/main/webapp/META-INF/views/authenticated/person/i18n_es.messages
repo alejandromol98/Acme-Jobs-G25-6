@@ -1,0 +1,14 @@
+# i18n_es.messages
+
+authenticated.person.list.label.username = Nombre de Usuario
+authenticated.person.list.label.title = Hilo de Mensajes
+
+authenticated.person.form.label.username = Nombre de Usuario
+authenticated.person.form.label.title = Título del Hilo de Mensajes
+authenticated.person.form.button.create = Añadir Usuario
+authenticated.person.form.button.delete = Borrar
+
+authenticated.person.form.label.create = Añadir Usuario
+authenticated.person.form.button.return = Volver
+
+authenticated.member.error.invalidUsername = Nombre de Usuario Incorrecto

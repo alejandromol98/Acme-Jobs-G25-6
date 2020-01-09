@@ -1,0 +1,21 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+anonymous.curriculum.form.label.name = Name:
+anonymous.curriculum.form.label.skills = Skills:
+anonymous.curriculum.form.label.studies = Studies:
+anonymous.curriculum.form.button.create= Curriculum!
+anonymous.curriculum.form.button.return = Return
+anonymous.curriculum.list.button.add = Add Curriculum
+
+anonymous.curriculum.list.label.moment = Moment
+anonymous.curriculum.list.label.name = Name
+anonymous.curriculum.list.label.skills= Skills
+anonymous.curriculum.list.label.studies= Studies

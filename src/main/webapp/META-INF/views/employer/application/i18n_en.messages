@@ -1,0 +1,20 @@
+employer.application.list.label.moment = Moment
+employer.application.list.label.status = Status
+employer.application.list.label.worker = Worker
+employer.application.list.label.job = Job
+employer.application.list.label.reference = Reference number
+
+employer.application.form.label.reference = Reference
+employer.application.form.label.moment = Moment
+employer.application.form.label.status = Status
+employer.application.form.label.statement = Statement
+employer.application.form.label.skills = Skills
+employer.application.form.label.qualifications = Qualifications
+employer.application.form.label.worker = Worker
+employer.application.form.label.job = Job
+employer.application.form.return = Return
+employer.application.form.label.accept = Accept
+employer.application.form.label.reject = Reject
+employer.application.form.label.justification = Reject justification
+employer.application.form.error.justification = You have to specify a reject justification
+employer.application.form.error.status = This application is already accepted or rejected

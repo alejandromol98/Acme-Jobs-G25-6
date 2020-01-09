@@ -1,0 +1,9 @@
+authenticated.storage.form.title.create = Become an storage
+
+authenticated.storage.form.label.firm = Firm: 
+authenticated.storage.form.label.responsibilityStatement = Responsibility Statement:
+
+authenticated.storage.form.button.create = Register
+authenticated.storage.form.button.return = Return
+
+authenticated.storage.error.pending = Your request is being processed

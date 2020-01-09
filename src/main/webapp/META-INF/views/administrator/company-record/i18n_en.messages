@@ -1,0 +1,34 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.company-record.list.label.name=Name
+administrator.company-record.list.label.sector=Sector
+administrator.company-record.list.label.description=Description
+administrator.company-record.list.label.website=Website
+administrator.company-record.list.label.ceo=Ceo's name
+administrator.company-record.list.label.email=Email
+administrator.company-record.list.label.incorporated=Incorporated
+master.menu.company-record=Company record
+master.menu.administrator.company-record = Company record
+master.menu.administrator.create.company-record = Create Company record
+
+administrator.company-record.form.label.ceo=CEO's name
+administrator.company-record.form.label.name=Name
+administrator.company-record.form.label.sector=Sector
+administrator.company-record.form.label.description=Description
+administrator.company-record.form.label.website=Website
+administrator.company-record.form.label.email=Email
+administrator.company-record.form.label.incorporated=Incorporated
+administrator.company-record.form.label.telephone=Telephone
+administrator.company-record.button.return=Return
+administrator.company-record.form.button.create=Create Company record
+administrator.company-record.form.button.update=Update
+administrator.company-record.form.button.delete=Delete
+administrator.company-record.button.create=Create

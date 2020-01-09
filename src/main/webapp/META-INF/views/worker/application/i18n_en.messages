@@ -1,0 +1,23 @@
+worker.application.list.label.moment = Moment
+worker.application.list.label.status = Status
+worker.application.list.label.worker = Worker
+worker.application.list.label.job = Job
+
+worker.application.form.label.reference = Reference
+worker.application.form.label.moment = Moment
+worker.application.form.label.status = Status
+worker.application.form.label.statement = Statement
+worker.application.form.label.skills = Skills
+worker.application.form.label.qualifications = Qualifications
+worker.application.form.label.worker = Worker
+worker.application.form.label.job = Job
+worker.application.form.return = Return
+
+worker.application.form.button.create = Apply
+
+worker.application.form.label.justification = Reject justification
+
+worker.application.form.error.finalMode = You can't apply because the job is not published
+worker.application.form.error.deadline = You can't apply because the deadline hasn't elapsed
+
+worker.application.form.error.notapply = You already applied to this job

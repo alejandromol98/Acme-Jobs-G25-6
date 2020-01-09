@@ -1,0 +1,9 @@
+authenticated.storage.form.title.create = Hazte storage
+
+authenticated.storage.form.label.firm = Firma: 
+authenticated.storage.form.label.responsibilityStatement = Declaración de responsabilidad:
+
+authenticated.storage.form.button.create = Registrar 
+authenticated.storage.form.button.return = Volver
+
+authenticated.storage.error.pending = Su petición esta siendo tramitada

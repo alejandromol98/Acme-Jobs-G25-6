@@ -1,0 +1,10 @@
+authenticated.investor.form.label.name = Name:
+authenticated.investor.form.label.sector = Sector:
+authenticated.investor.form.label.statement = Statement:
+authenticated.investor.form.label.stars = Stars:
+
+
+authenticated.investor.list.label.name = Name:
+authenticated.investor.list.label.sector = Sector:
+
+administrator.investor.form.button.create = Create

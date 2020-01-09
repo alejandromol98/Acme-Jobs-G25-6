@@ -1,0 +1,27 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authenticated.request.list.label.moment=Momento
+authenticated.request.list.label.title=Título
+
+authenticated.request.form.label.title=Título
+authenticated.request.form.label.moment=Momento
+authenticated.request.form.label.deadline=Tiempo limite
+authenticated.request.form.label.description=Descripción
+authenticated.request.form.label.ticker=Tipo
+authenticated.request.form.label.reward=Compensación económica
+authenticated.request.form.button.return=Volver
+master.menu.authenticated.create.request=Crear petición
+authenticated.request.form.button.create=Crear
+authenticated.request.form.label.stars=Estrellas
+master.menu.request=Petición 
+master.menu.authenticated.request=Petición
+
+authenticated.request.form.error.invalidmoney = Moneda no válida

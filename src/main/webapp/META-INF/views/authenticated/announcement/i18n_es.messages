@@ -1,0 +1,13 @@
+# i18n_es.messages
+
+
+authenticated.announcement.form.label.title = Título:
+authenticated.announcement.form.label.moment = Momento:
+authenticated.announcement.form.label.moreInfo = Más Información:
+
+authenticated.announcement.form.label.text = Descripción:
+
+authenticated.announcement.form.button.return = Volver
+
+authenticated.announcement.list.label.moment = Momento
+authenticated.announcement.list.label.title = Título

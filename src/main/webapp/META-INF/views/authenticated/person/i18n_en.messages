@@ -1,0 +1,14 @@
+# i18n_en.messages
+
+authenticated.person.list.label.username = User Name
+authenticated.person.list.label.title = Message Thread
+
+authenticated.person.form.label.username = User Name
+authenticated.person.form.label.title = Message Thread Title
+authenticated.person.form.button.create = Add User
+authenticated.person.form.button.delete = Delete
+
+authenticated.person.form.label.create = Add User
+authenticated.person.form.button.return = Return
+
+authenticated.member.error.invalidUsername = Invalid User Name

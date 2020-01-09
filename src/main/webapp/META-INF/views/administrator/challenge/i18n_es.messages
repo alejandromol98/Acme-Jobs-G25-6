@@ -1,0 +1,17 @@
+administrator.challenge.list.label.title = Título
+administrator.challenge.list.label.deadline = Fecha límite
+administrator.challenge.list.label.reward = Recompensa
+
+administrator.challenge.form.label.title = Título
+administrator.challenge.form.deadline = Fecha límite
+administrator.challenge.form.description = Descripción
+administrator.challenge.form.rewardGoalGold = Primer premio
+administrator.challenge.form.rewardGoalSilver = Segundo premio
+administrator.challenge.form.rewardGoalBronze = Tercer premio
+administrator.challenge.form.return = Volver
+
+administrator.challenge.form.button.update = Actualizar
+administrator.challenge.form.button.create = Crear
+administrator.challenge.form.button.delete = Borrar
+
+administrator.challenge.form.error.invalidmoney = Moneda no válida

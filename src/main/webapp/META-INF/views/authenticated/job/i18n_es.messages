@@ -1,0 +1,9 @@
+employer.job.form.label.moreInfo = Más información
+employer.job.form.label.description = Descripción
+employer.job.form.label.salary = Salario
+employer.job.form.label.deadline = Fecha límite
+employer.job.form.label.title = Título
+employer.job.form.label.finalMode = Modo
+employer.job.form.label.referenceNumber = Número de referencia
+
+worker.job.form.label.application = Aplicar

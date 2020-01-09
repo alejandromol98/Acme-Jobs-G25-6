@@ -1,0 +1,11 @@
+administrator.storage.list.label.firm = Firm
+administrator.storage.list.label.responsibilityStatement = Responsibility Statement
+
+administrator.storage.form.label.firm = Firm:
+administrator.storage.form.label.responsibilityStatement = Responsibility Statement:
+administrator.storage.form.label.status = Status:
+administrator.storage.form.label.status.pending = Pending
+administrator.storage.form.label.status.accepted = Accepted
+
+administrator.storage.form.button.update = Accept
+administrator.storage.form.button.return = Return

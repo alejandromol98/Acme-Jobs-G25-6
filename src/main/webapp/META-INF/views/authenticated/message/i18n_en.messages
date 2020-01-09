@@ -1,0 +1,20 @@
+# i18n_en.messages
+
+authenticated.message.list.label.title = Title
+authenticated.message.list.label.moment = Moment
+authenticated.message.list.label.author = Author
+
+authenticated.message.form.label.title = Title
+authenticated.message.form.label.moment = Creation Date
+authenticated.message.form.label.message-thread = Message Thread Associated
+authenticated.message.form.label.tags = Tags
+authenticated.message.form.label.body = Body
+authenticated.message.form.label.author = Author
+authenticated.message.form.label.messageThread.title = Message Thread 
+
+authenticated.message.form.error.title = Title not allowed
+authenticated.message.form.error.tags = Tags not allowed
+authenticated.message.form.error.body = Body not allowed
+
+authenticated.message.form.button.create = Create Message
+authenticated.message.form.button.return = Return

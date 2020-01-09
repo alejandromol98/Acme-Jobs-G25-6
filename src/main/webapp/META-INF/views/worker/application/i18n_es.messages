@@ -1,0 +1,23 @@
+worker.application.list.label.moment = Fecha de creación
+worker.application.list.label.status = Estado
+worker.application.list.label.worker = Trabajador
+worker.application.list.label.job = Trabajo
+
+worker.application.form.label.reference = Número de referencia
+worker.application.form.label.moment = Fecha de creación
+worker.application.form.label.status = Estado
+worker.application.form.label.statement = Declaración
+worker.application.form.label.skills = Habilidades
+worker.application.form.label.qualifications = Calificaciones
+worker.application.form.label.worker = Trabajador
+worker.application.form.label.job = Trabajo
+worker.application.form.return = Volver
+
+worker.application.form.button.create = Aplicar
+
+worker.application.form.label.justification = Justificación del rechazo
+
+worker.application.form.error.finalMode = No puedes aplicar porque este trabajo no está publicado
+worker.application.form.error.deadline = No puedes aplicar porque la fecha límite ha pasado
+
+worker.application.form.error.notapply = Ya has aplicado a este trabajo

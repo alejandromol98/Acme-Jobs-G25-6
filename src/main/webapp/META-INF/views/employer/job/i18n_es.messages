@@ -1,0 +1,24 @@
+employer.job.form.label.moreInfo = Más información
+employer.job.form.label.description = Descripción
+employer.job.form.label.salary = Salario
+employer.job.form.label.deadline = Fecha límite
+employer.job.form.label.title = Título
+employer.job.form.label.finalMode = Modo Final
+employer.job.form.label.referenceNumber = Número de referencia
+employer.job.form.label.duty = Tareas
+employer.job.form.return= Volver
+
+employer.job.list.label.moreInfo = Más información
+employer.job.list.label.description = Descripción
+employer.job.list.label.salary = Salario
+employer.job.list.label.deadline = Fecha límite
+employer.job.list.label.title = Título
+employer.job.list.label.finalMode = Modo
+employer.job.list.label.referenceNumber = Número de referencia
+
+employer.job.form.error.reference = Hay alguna/s aplicacion/es ! No se puede borrar.
+
+employer.job.form.error.finalMode = No puedes guardar el archivo en final mode.
+employer.job.form.button.create= Registrar
+employer.job.form.button.update = Editar 
+employer.job.form.button.delete = Eliminar

@@ -1,0 +1,11 @@
+administrator.storage.list.label.firm = Firma
+administrator.storage.list.label.responsibilityStatement = Declaración de responsabilidad
+
+administrator.storage.form.label.firm = Firma:
+administrator.storage.form.label.responsibilityStatement = Declaración de responsabilidad:
+administrator.storage.form.label.status = Estado:
+administrator.storage.form.label.status.pending = Pendiente
+administrator.storage.form.label.status.accepted = Aceptada
+
+administrator.storage.form.button.update = Aceptar
+administrator.storage.form.button.return = Volver

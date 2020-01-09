@@ -1,0 +1,15 @@
+authenticated.challenge.list.label.title = Title
+authenticated.challenge.list.label.deadline = Deadline
+authenticated.challenge.list.label.description = Description
+
+authenticated.challenge.form.label.title = Title
+authenticated.challenge.form.deadline = Deadline
+authenticated.challenge.form.description = Description
+authenticated.challenge.form.rewardGoalGold = First prize
+authenticated.challenge.form.rewardGoalSilver = Second prize
+authenticated.challenge.form.rewardGoalBronze = Third price
+authenticated.challenge.form.return = Return
+
+administrator.challenge.form.button.update = Update
+administrator.challenge.form.button.create = Create
+administrator.challenge.form.button.delete = Delete

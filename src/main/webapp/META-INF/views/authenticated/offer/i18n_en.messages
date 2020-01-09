@@ -1,0 +1,21 @@
+# i18n_en.messages
+
+
+authenticated.offer.form.label.ticker = Identifier:
+authenticated.offer.form.label.title = Title: 
+authenticated.offer.form.label.text = Description:
+authenticated.offer.form.label.min = Minimun Salary:
+authenticated.offer.form.label.max = Maximun Salary:
+authenticated.offer.form.label.moment = Moment:
+authenticated.offer.form.label.deadline = Deadline:
+authenticated.offer.form.button.return = Return
+
+authenticated.offer.list.label.ticker = ID
+authenticated.offer.list.label.title = Title
+authenticated.offer.list.label.min = Min. Salary
+authenticated.offer.list.label.max = Max. Salary
+
+master.menu.authenticated.create.offer = Create Offer
+authenticated.offer.form.button.create = Create
+
+authenticated.offer.form.error.invalidmoney = Invalid currency

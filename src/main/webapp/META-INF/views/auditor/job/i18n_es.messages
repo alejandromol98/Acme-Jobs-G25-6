@@ -1,0 +1,17 @@
+auditor.job.form.label.moreInfo = Más información
+auditor.job.form.label.description = Descripción
+auditor.job.form.label.salary = Salario
+auditor.job.form.label.deadline = Fecha límite
+auditor.job.form.label.title = Título
+auditor.job.form.label.finalMode = Modo
+auditor.job.form.label.referenceNumber = Número de referencia
+
+auditor.job.list.label.moreInfo = Más información
+auditor.job.list.label.description = Descripción
+auditor.job.list.label.salary = Salario
+auditor.job.list.label.deadline = Fecha límite
+auditor.job.list.label.title = Título
+auditor.job.list.label.finalMode = Modo
+auditor.job.list.label.referenceNumber = Número de referencia
+
+auditor.job.form.label.auditRecord = Registros de Auditoría

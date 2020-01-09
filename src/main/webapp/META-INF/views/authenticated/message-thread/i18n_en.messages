@@ -1,0 +1,13 @@
+# i18n_en.messages
+
+authenticated.messageThread.list.label.title = Title
+authenticated.messageThread.list.label.moment = Moment
+
+authenticated.messageThread.form.label.title = Title
+authenticated.messageThread.form.label.moment = Moment
+authenticated.messageThread.form.label.persons = Users involved
+authenticated.messageThread.form.persons = Users Involved
+
+authenticated.messageThread.form.button.create = Create Message Thread
+authenticated.messageThread.form.button.return = Return
+authenticated.messageThread.form.messages = Go to Messages
