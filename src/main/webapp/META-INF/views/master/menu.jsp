@@ -61,8 +61,6 @@
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.anonymous.company-record" action="/authenticated/company-record/list" />
 			<acme:menu-suboption code="master.menu.administrator.company-record.create" action="/administrator/company-record/create" />
-			<acme:menu-separator />
-			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown" />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
