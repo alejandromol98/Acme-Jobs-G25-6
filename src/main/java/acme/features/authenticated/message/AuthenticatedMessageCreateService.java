@@ -22,11 +22,10 @@ import acme.framework.services.AbstractCreateService;
 public class AuthenticatedMessageCreateService implements AbstractCreateService<Authenticated, Message> {
 
 	@Autowired
-	private AuthenticatedMessageRepository	repository;
+	private AuthenticatedMessageRepository repository;
 
 	@Autowired
-	AdministratorCustomisationRepository	customisationRepository;
-
+	AdministratorCustomisationRepository customisationRepository;
 
 	@Override
 	public boolean authorise(final Request<Message> request) {
@@ -34,7 +33,8 @@ public class AuthenticatedMessageCreateService implements AbstractCreateService<
 
 		Person person;
 
-		person = this.repository.findPersons(request.getModel().getInteger("messageThread.id"), request.getPrincipal().getActiveRoleId());
+		person = this.repository.findPersons(request.getModel().getInteger("messageThread.id"),
+				request.getPrincipal().getActiveRoleId());
 
 		return person != null;
 	}
@@ -55,7 +55,8 @@ public class AuthenticatedMessageCreateService implements AbstractCreateService<
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "moment", "tags", "body", "authenticated.userAccount.username", "messageThread.id", "messageThread.title");
+		request.unbind(entity, model, "title", "moment", "tags", "body", "authenticated.userAccount.username",
+				"messageThread.id", "messageThread.title");
 
 		if (request.isMethod(HttpMethod.GET)) {
 			model.setAttribute("accept", "false");
@@ -88,7 +89,11 @@ public class AuthenticatedMessageCreateService implements AbstractCreateService<
 		assert entity != null;
 		assert errors != null;
 
+		Message m;
 		Boolean isAccepted;
+		int id;
+		id = request.getModel().getInteger("id");
+		m = this.repository.findOneMessageById(id);
 		isAccepted = request.getModel().getBoolean("accept");
 		errors.state(request, isAccepted, "accept", "anonymous.user-account.error.must-accept");
 
@@ -97,27 +102,31 @@ public class AuthenticatedMessageCreateService implements AbstractCreateService<
 		Boolean spamWordsTags = true;
 		Boolean spamWordsBody = true;
 
-		//		if (entity.getId() != 0) {
+		// if (entity.getId() != 0) {
 		c = this.customisationRepository.findOne();
+
 		String[] partes = c.getCustomisations().split(",");
 
-		for (String parte : partes) {
-			if (entity.getTitle().toLowerCase().contains(parte)) {
+		for (String s : partes) {
+			if (entity.getTitle().contains(s)) {
 				spamWordsTitle = false;
-			}
-			if (entity.getTags().toLowerCase().contains(parte)) {
-				spamWordsTags = false;
-			}
-			if (entity.getBody().toLowerCase().contains(parte)) {
-				spamWordsBody = false;
-			}
-		}
-		errors.state(request, spamWordsTitle, "title", "authenticated.message.form.error.title");
-		errors.state(request, spamWordsTags, "tags", "authenticated.message.form.error.tags");
-		errors.state(request, spamWordsBody, "body", "authenticated.message.form.error.body");
-	}
+				errors.state(request, spamWordsTitle, "title", "authenticated.message.form.error.title");
 
-	// }
+			}
+			if (entity.getBody().contains(s)) {
+				spamWordsBody = false;
+				errors.state(request, spamWordsBody, "body", "authenticated.message.form.error.body");
+
+			}
+			if (entity.getTags().contains(s)) {
+				spamWordsTags = false;
+				errors.state(request, spamWordsTags, "tags", "authenticated.message.form.error.tags");
+
+			}
+
+		}
+
+	}
 
 	@Override
 	public void create(final Request<Message> request, final Message entity) {

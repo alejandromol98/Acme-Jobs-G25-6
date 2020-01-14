@@ -7,3 +7,5 @@ employer.job.form.label.finalMode = Final mode
 employer.job.form.label.referenceNumber = Reference number
 
 worker.job.form.label.application = Apply
+
+authenticated.job.button.return=Return
