@@ -7,6 +7,12 @@ employer.job.form.label.finalMode = Final mode
 employer.job.form.label.referenceNumber = Reference number
 employer.job.form.label.duty = Duties
 employer.job.form.return=Return
+employer.job.form.error.deadline= We can not save in final mode, there is a problem in deadline.
+employer.job.form.error.dutisSpam= We can not save in final mode, there is a spam word in the dutis.
+employer.job.form.error.description= We can not save in final mode, there is a spam word in the description.
+employer.job.form.error.title= We can not save in final mode, there is a spam word in the title.
+employer.job.form.error.moreInfo= We can not save in final mode, there is a spam word in more info.
+employer.job.form.error.dutisporcentaje= We can not save in final mode, dutis' % not 100.
 
 employer.job.list.label.moreInfo = More info	
 employer.job.list.label.description = Description
