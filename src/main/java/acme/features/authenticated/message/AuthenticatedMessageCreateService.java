@@ -104,40 +104,29 @@ public class AuthenticatedMessageCreateService implements AbstractCreateService<
 
 		// if (entity.getId() != 0) {
 		c = this.customisationRepository.findOne();
+
 		String[] partes = c.getCustomisations().split(",");
 
-			for (String s : partes) {
-				if (m.getTitle().contains(s)) {
-					spamWordsTitle = false;
-					errors.state(request, spamWordsTitle, "title", "authenticated.message.form.error.title");
+		for (String s : partes) {
+			if (entity.getTitle().contains(s)) {
+				spamWordsTitle = false;
+				errors.state(request, spamWordsTitle, "title", "authenticated.message.form.error.title");
 
-				}
-				if (m.getBody().contains(s)) {
-					spamWordsBody = false;
-					errors.state(request, spamWordsBody, "body", "authenticated.message.form.error.body");
+			}
+			if (entity.getBody().contains(s)) {
+				spamWordsBody = false;
+				errors.state(request, spamWordsBody, "body", "authenticated.message.form.error.body");
 
-				}
-				if (m.getTags().contains(s)) {
-					spamWordsTags = false;
-					errors.state(request, spamWordsTags, "tags", "authenticated.message.form.error.tags");
+			}
+			if (entity.getTags().contains(s)) {
+				spamWordsTags = false;
+				errors.state(request, spamWordsTags, "tags", "authenticated.message.form.error.tags");
 
-				}
-			
+			}
+
 		}
-		// for (String parte : partes) {
-		// if (entity.getTitle().toLowerCase().contains(parte)) {
-		// spamWordsTitle = false;
-		// }
-		// if (entity.getTags().toLowerCase().contains(parte)) {
-		// spamWordsTags = false;
-		// }
-		// if (entity.getBody().toLowerCase().contains(parte)) {
-		// spamWordsBody = false;
-		// }
-		// }
-	}
 
-	// }
+	}
 
 	@Override
 	public void create(final Request<Message> request, final Message entity) {
