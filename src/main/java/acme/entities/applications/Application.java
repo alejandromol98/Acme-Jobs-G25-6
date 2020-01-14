@@ -12,7 +12,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
-import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 
@@ -35,7 +34,7 @@ public class Application extends DomainEntity {
 	@Column(unique = true)
 	@NotBlank
 	@Length(min = 5, max = 15)
-	@Pattern(regexp = "^[A-Z]{4}-[A-Z]{4}:[A-Z]{4}$")
+	//@Pattern(regexp = "^[A-Z]{4}-[A-Z]{4}:[A-Z]{4}$")
 	private String				reference;
 
 	@Past
