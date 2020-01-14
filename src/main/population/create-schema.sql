@@ -41,7 +41,7 @@
     create table `audit_record` (
        `id` integer not null,
         `version` integer not null,
-        `body` varchar(255),
+        `body` varchar(1024),
         `moment` datetime(6),
         `status` integer,
         `title` varchar(255),
@@ -156,7 +156,6 @@
         `version` integer not null,
         `deadline` datetime(6),
         `description` varchar(1024),
-
         `final_mode` bit not null,
         `more_info` varchar(255),
         `reference_number` varchar(255),
@@ -187,7 +186,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-
     create table `offer` (
        `id` integer not null,
         `version` integer not null,
@@ -202,7 +200,6 @@
         `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
-
 
     create table `person` (
        `id` integer not null,
@@ -257,7 +254,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-
     create table `user_account` (
        `id` integer not null,
         `version` integer not null,
@@ -266,6 +262,9 @@
         `identity_name` varchar(255),
         `identity_surname` varchar(255),
         `password` varchar(255),
+        `phone_area_code` varchar(255),
+        `phone_country_code` integer,
+        `phone_number` varchar(255),
         `username` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -361,7 +360,6 @@
        references `employer` (`id`);
 
     alter table `message` 
-
        add constraint `FK3ny0h1379q528toyokq81noiu` 
        foreign key (`authenticated_id`) 
        references `authenticated` (`id`);
@@ -370,7 +368,6 @@
        add constraint `FKn5adlx3oqjna7aupm8gwg3fuj` 
        foreign key (`message_thread_id`) 
        references `message_thread` (`id`);
-
 
     alter table `person` 
        add constraint `FKksb3u7mmp1dgbomtfsy7chbrd` 
@@ -396,7 +393,6 @@
        add constraint FK_9x0gqgib0ufkaqlg9a10j24n5 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
-
 
     alter table `worker` 
        add constraint FK_l5q1f33vs2drypmbdhpdgwfv3 
