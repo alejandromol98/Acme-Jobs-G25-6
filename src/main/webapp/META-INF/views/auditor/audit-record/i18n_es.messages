@@ -13,7 +13,7 @@ auditor.auditRecord.form.label.body = Texto
 auditor.auditRecord.form.label.auditor = Auditor
 auditor.auditRecord.form.label.job = Trabajo
 
-auditor.auditRecord.form.button.create = Crear
+auditor.auditRecord.form.button.create = Crear registro de auditoría
 
 auditor.auditRecord.button.return = Volver
 

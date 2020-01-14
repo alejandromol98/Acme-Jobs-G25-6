@@ -88,7 +88,11 @@ public class AuthenticatedMessageCreateService implements AbstractCreateService<
 		assert entity != null;
 		assert errors != null;
 
+		Message m;
 		Boolean isAccepted;
+		int id;
+		id = request.getModel().getInteger("id");
+		m = this.repository.findOneMessageById(id);
 		isAccepted = request.getModel().getBoolean("accept");
 		errors.state(request, isAccepted, "accept", "anonymous.user-account.error.must-accept");
 
@@ -101,17 +105,20 @@ public class AuthenticatedMessageCreateService implements AbstractCreateService<
 		c = this.customisationRepository.findOne();
 		String[] partes = c.getCustomisations().split(",");
 
-		for (String parte : partes) {
-			if (entity.getTitle().toLowerCase().contains(parte)) {
-				spamWordsTitle = false;
-			}
-			if (entity.getTags().toLowerCase().contains(parte)) {
-				spamWordsTags = false;
-			}
-			if (entity.getBody().toLowerCase().contains(parte)) {
-				spamWordsBody = false;
-			}
+		if (m.getTitle() != null && m.getTags() != null) {
+
 		}
+		//		for (String parte : partes) {
+		//			if (entity.getTitle().toLowerCase().contains(parte)) {
+		//				spamWordsTitle = false;
+		//			}
+		//			if (entity.getTags().toLowerCase().contains(parte)) {
+		//				spamWordsTags = false;
+		//			}
+		//			if (entity.getBody().toLowerCase().contains(parte)) {
+		//				spamWordsBody = false;
+		//			}
+		//		}
 		errors.state(request, spamWordsTitle, "title", "authenticated.message.form.error.title");
 		errors.state(request, spamWordsTags, "tags", "authenticated.message.form.error.tags");
 		errors.state(request, spamWordsBody, "body", "authenticated.message.form.error.body");

@@ -49,7 +49,6 @@
 
     alter table `message` 
        drop 
-
        foreign key `FK3ny0h1379q528toyokq81noiu`;
 
     alter table `message` 
@@ -116,7 +115,6 @@
 
     drop table if exists `message_thread`;
 
-
     drop table if exists `offer`;
 
     drop table if exists `person`;
@@ -128,7 +126,6 @@
     drop table if exists `shout`;
 
     drop table if exists `storage`;
-
 
     drop table if exists `user_account`;
 
