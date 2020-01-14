@@ -13,7 +13,7 @@
 		<acme:form-moment code="worker.application.form.label.moment" path="moment" readonly="true"/>
 		<acme:form-textbox code="worker.application.form.label.status" path="status" readonly="true"/>
 	</jstl:if>
-	<acme:form-textbox code="worker.application.form.label.reference" path="reference" />
+	<acme:form-textbox code="worker.application.form.label.reference" path="reference" placeholder="EEEE:JJJJ-WWWW"/>
 	<acme:form-textbox code="worker.application.form.label.statement" path="statement" />
 	<acme:form-textbox code="worker.application.form.label.skills" path="skills" />
 	<acme:form-textbox code="worker.application.form.label.qualifications" path="qualifications" />

@@ -46,7 +46,7 @@ master.menu.administrator.investor.create = Create investor
 master.menu.administrator.announcement.create = Create announcement
 master.menu.administrator.challenge.create = Create challenge
 master.menu.administrator.company-record.create = Create Company Record
-master.menu.employer.job = Job
+master.menu.employer.job = My jobs
 master.menu.administrator.auditor.list = Pending Auditors
 
 # master.menu.provider ########################################################
@@ -55,22 +55,19 @@ master.menu.provider = Provider
 master.menu.provider.favourite-link = Favourite link
 master.menu.requests = Requests
 master.menu.provider.request.create = Create Requests
-master.menu.authenticated.job = Job
+master.menu.authenticated.job = Jobs
 
 # master.menu.worker ########################################################
-master.menu.worker.application = Applications
-master.menu.worker.application.list = List application
-master.menu.auditor.auditRecord.list = List auditor
+master.menu.worker.application = My Applications
+master.menu.auditor.auditRecord.list = Auditors
 master.menu.auditor.auditRecord.list.mine=My auditors
 
 # master.menu.employer ########################################################
 master.menu.employer.application = Applications
-master.menu.employer.application.list = List application
 master.menu.employer.job.create = Create Job
 
 # master.menu.consumer ##########################################################
 
-master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 master.menu.anonymous.links=Favourite link
 master.menu.anonymous.favourite-link-alba= Alba's link
@@ -87,12 +84,7 @@ master.menu.authenticated.challenge = Challenge
 
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
-master.menu.user-account.provider = Provider data
-master.menu.user-account.become-provider = Become a provider
-master.menu.user-account.consumer = Consumer data
-master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.announcement = Announcements
-master.menu.provider.request = Create Request
 master.menu.administrator.company-record=Company Record
 master.menu.storage.become-auditor = Become auditor
 master.menu.user-account.become-worker = Become a worker
@@ -125,7 +117,7 @@ master.footer.label.spanish = Spanish
 
 # master.company ##############################################################
 
-master.company.title = La compañía
+master.company.title = The company
 master.company.text = \
 	Acme Jobs, Inc. is intended to be a job searching platform.
 master.company.name = Acme Jobs, Inc.

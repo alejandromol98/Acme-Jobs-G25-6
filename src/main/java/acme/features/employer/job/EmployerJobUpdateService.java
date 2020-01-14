@@ -1,3 +1,4 @@
+
 package acme.features.employer.job;
 
 import java.util.ArrayList;
@@ -22,16 +23,17 @@ import acme.framework.services.AbstractUpdateService;
 public class EmployerJobUpdateService implements AbstractUpdateService<Employer, Job> {
 
 	@Autowired
-	EmployerJobRepository employerJobRepository;
+	EmployerJobRepository					employerJobRepository;
 
 	@Autowired
-	EmployerDutyRepository employerDutyRepository;
+	EmployerDutyRepository					employerDutyRepository;
 
 	@Autowired
-	AdministratorCustomisationRepository customisationRepository;
+	AdministratorCustomisationRepository	customisationRepository;
+
 
 	@Override
-	public boolean authorise(Request<Job> request) {
+	public boolean authorise(final Request<Job> request) {
 		// TODO Auto-generated method stub
 		assert request != null;
 
@@ -39,7 +41,7 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 	}
 
 	@Override
-	public void bind(Request<Job> request, Job entity, Errors errors) {
+	public void bind(final Request<Job> request, final Job entity, final Errors errors) {
 		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
@@ -49,7 +51,7 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 	}
 
 	@Override
-	public void unbind(Request<Job> request, Job entity, Model model) {
+	public void unbind(final Request<Job> request, final Job entity, final Model model) {
 		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
@@ -62,13 +64,12 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		if (j.isFinalMode()) {
 			request.unbind(entity, model);
 		} else {
-			request.unbind(entity, model, "referenceNumber", "title", "deadline", "finalMode", "salary", "description",
-					"moreInfo");
+			request.unbind(entity, model, "referenceNumber", "title", "deadline", "finalMode", "salary", "description", "moreInfo");
 		}
 	}
 
 	@Override
-	public Job findOne(Request<Job> request) {
+	public Job findOne(final Request<Job> request) {
 		// TODO Auto-generated method stub
 		assert request != null;
 
@@ -82,7 +83,7 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 	}
 
 	@Override
-	public void validate(Request<Job> request, Job entity, Errors errors) {
+	public void validate(final Request<Job> request, final Job entity, final Errors errors) {
 		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
@@ -94,7 +95,6 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		j = this.employerJobRepository.findOneById(jobId);
 
 		if (entity.getId() != 0) {
-			
 
 			if (entity.isFinalMode() == true) {
 
@@ -108,9 +108,8 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 					porcentaje += dutis.get(i).getPercentage();
 				}
 				if (j.getDescription() != null & porcentaje == 100) {
-					for (int i = 0; i < partes.length; i++) {
-						if (j.getDescription().contains(partes[i]) || j.getTitle().contains(partes[i])
-								|| j.getMoreInfo().contains(partes[i])) {// falta spam
+					for (String parte : partes) {
+						if (j.getDescription().contains(parte) || j.getTitle().contains(parte) || j.getMoreInfo().contains(parte)) {// falta spam
 							isValid = false;
 						}
 					}
@@ -124,15 +123,10 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 			errors.state(request, isValid, "finalMode", "employer.job.form.error.finalMode");
 		}
 
-		Boolean isValid2;
-		if (!errors.hasErrors("finalMode")) {
-			isValid2 = !entity.isFinalMode();
-			errors.state(request, isValid2, "finalMode", "employer.job.form.error.finalMode");
-		}
 	}
 
 	@Override
-	public void update(Request<Job> request, Job entity) {
+	public void update(final Request<Job> request, final Job entity) {
 		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
