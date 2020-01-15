@@ -2,7 +2,9 @@
 package acme.features.employer.job;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -91,13 +93,20 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		Job j;
 		Customisation c;
 		Boolean isValid = true;
+		Boolean isValid2 = true;
+		Boolean isValid3 = true;
+		Boolean isValid4 = true;
+		Boolean isValid5 = true;
+		Boolean isValid6 = true;
+
 		Integer jobId = request.getModel().getInteger("id");
 		j = this.employerJobRepository.findOneById(jobId);
-
+		Calendar cal = Calendar.getInstance();
+		Date dateNow = cal.getTime();
+		
 		if (entity.getId() != 0) {
 
 			if (entity.isFinalMode() == true) {
-
 				c = this.customisationRepository.findOne();
 				String[] partes = c.getCustomisations().split(",");
 				Integer porcentaje = 0;
@@ -111,16 +120,38 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 					for (String parte : partes) {
 						if (j.getDescription().contains(parte) || j.getTitle().contains(parte) || j.getMoreInfo().contains(parte)) {// falta spam
 							isValid = false;
+							errors.state(request, isValid, "finalMode", "employer.job.form.error.dutisSpam");
+
 						}
 					}
-				} else {
-					isValid = false;
+				}
+				if (j.getDeadline().before(dateNow)) {
+					isValid2 = false;
+					errors.state(request, isValid2, "deadline", "employer.job.form.error.deadline");
+
+				}
+				if (j.getDescription() != null) {
+					for (String parte : partes) {
+						if (j.getDescription().contains(parte)) {
+							isValid3 = false;
+							errors.state(request, isValid3, "description", "employer.job.form.error.description");
+						}
+						if (j.getTitle().contains(parte)) {
+							isValid4 = false;
+							errors.state(request, isValid4, "title", "employer.job.form.error.title");
+						}
+						if (j.getMoreInfo().contains(parte)) {
+							isValid5 = false;
+							errors.state(request, isValid5, "title", "employer.job.form.error.moreInfo");
+
+						}
+					}
+				} if(porcentaje!=100){
+					isValid6=false;
+					errors.state(request, isValid6, "finalMode", "employer.job.form.error.dutisporcentaje");
+
 				}
 			}
-		}
-		if (isValid == false) {
-			j.setFinalMode(false);
-			errors.state(request, isValid, "finalMode", "employer.job.form.error.finalMode");
 		}
 
 	}

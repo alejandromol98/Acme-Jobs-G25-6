@@ -22,3 +22,10 @@ employer.job.form.error.finalMode = No puedes guardar el archivo en final mode.
 employer.job.form.button.create= Registrar
 employer.job.form.button.update = Editar 
 employer.job.form.button.delete = Eliminar
+
+employer.job.form.error.deadline= No se puede guardar en modo final, hay un problema en la fecha.
+employer.job.form.error.dutisSpam= No se puede guardar en modo final, hay alguna palabra spam en las tareas.
+employer.job.form.error.description= No se puede guardar en modo final,hay alguna palabra spam en la descripción.
+employer.job.form.error.title= No se puede guardar en modo final, hay alguna palabra spam en el título.
+employer.job.form.error.moreInfo= No se puede guardar en modo final, hay alg una palabra spam en  más información.
+employer.job.form.error.dutisporcentaje= No se puede guardar en modo final, las tareas no suman 100%.

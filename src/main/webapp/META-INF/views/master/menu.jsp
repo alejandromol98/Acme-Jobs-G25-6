@@ -42,11 +42,16 @@
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.customisations" action="/administrator/customisation/update" />
 			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown" />
+		</acme:menu-option>
+
+		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
+
 			<acme:menu-suboption code="master.menu.user-account.announcement" action="/administrator/announcement/list" />
 			<acme:menu-suboption code="master.menu.administrator.announcement.create" action="/administrator/announcement/create" />
 			<acme:menu-separator />
-			<acme:menu-suboption code="master.menu.administrator.auditor.list" action="/administrator/storage/list"/>
-			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.auditor.list" action="/administrator/storage/list" />
+			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.authenticated.challenge" action="/authenticated/challenge/list" />
 			<acme:menu-suboption code="master.menu.administrator.challenge.create" action="/administrator/challenge/create" />
 			<acme:menu-separator />
