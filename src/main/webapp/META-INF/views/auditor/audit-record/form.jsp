@@ -5,7 +5,7 @@
 
 <acme:form>
 	<acme:form-hidden path="jobId" />
-
+ 
 	<jstl:if test="${command != 'create'}">
 		<acme:form-textbox code="auditor.auditRecord.form.label.job" path="job.title" readonly="true" />
 		<acme:form-textbox code="auditor.auditRecord.form.label.auditor" path="auditor.authorityName" readonly="true" />

@@ -870,4 +870,20 @@ Phone
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1113</x>
+      <y>1008</y>
+      <w>154</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Phone
+--
++ countryCode: Integer{NotNull}
++ areaCode: String
++ number: String{NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>
