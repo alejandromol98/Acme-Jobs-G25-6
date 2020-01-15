@@ -98,6 +98,7 @@ public class AuthenticatedMessageCreateService implements AbstractCreateService<
 		Boolean spamWordsBody = true;
 
 		c = this.customisationRepository.findOne();
+
 		String[] partes = c.getCustomisations().split(",");
 
 		for (String s : partes) {
@@ -116,7 +117,6 @@ public class AuthenticatedMessageCreateService implements AbstractCreateService<
 				errors.state(request, spamWordsTags, "tags", "authenticated.message.form.error.tags");
 
 			}
-
 		}
 	}
 
