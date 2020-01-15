@@ -25,13 +25,14 @@ import acme.framework.services.AbstractUpdateService;
 public class EmployerJobUpdateService implements AbstractUpdateService<Employer, Job> {
 
 	@Autowired
-	EmployerJobRepository employerJobRepository;
+	EmployerJobRepository					employerJobRepository;
 
 	@Autowired
-	EmployerDutyRepository employerDutyRepository;
+	EmployerDutyRepository					employerDutyRepository;
 
 	@Autowired
-	AdministratorCustomisationRepository customisationRepository;
+	AdministratorCustomisationRepository	customisationRepository;
+
 
 	@Override
 	public boolean authorise(final Request<Job> request) {
@@ -65,8 +66,7 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		if (j.isFinalMode()) {
 			request.unbind(entity, model);
 		} else {
-			request.unbind(entity, model, "referenceNumber", "title", "deadline", "finalMode", "salary", "description",
-					"moreInfo");
+			request.unbind(entity, model, "referenceNumber", "title", "deadline", "finalMode", "salary", "description", "moreInfo");
 		}
 	}
 
@@ -115,9 +115,10 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 				List<Duty> dutis = new ArrayList<>(dutties);
 				for (int i = 0; i < dutis.size(); i++) {
 					porcentaje += dutis.get(i).getPercentage();
-					
+				}
+				if (j.getDescription() != null & porcentaje == 100) {
 					for (String parte : partes) {
-						if (dutis.get(i).getTitle().contains(parte) || dutis.get(i).getDescription().contains(parte)) {
+						if (j.getDescription().contains(parte) || j.getTitle().contains(parte) || j.getMoreInfo().contains(parte)) {// falta spam
 							isValid = false;
 							errors.state(request, isValid, "finalMode", "employer.job.form.error.dutisSpam");
 

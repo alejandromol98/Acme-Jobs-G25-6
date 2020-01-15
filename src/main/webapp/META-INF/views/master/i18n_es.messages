@@ -58,21 +58,18 @@ master.menu.authenticated.request = Peticiones
 master.menu.provider.request.create = Crear Peticiones
 
 # master.menu.worker ########################################################
-master.menu.worker.application = Aplicaciones
+master.menu.worker.application = Mis aplicaciones
 master.menu.worker.application.list = Listar aplicaciones
-master.menu.employer.job= Trabajos
+master.menu.employer.job= Mis trabajos
 master.menu.employer.job.create = Crear Trabajo
-master.menu.auditor.auditRecord.list = Listar auditores
-master.menu.auditor.auditRecord.list.mine=Mis auditores
-
+master.menu.auditor.auditRecord.list = Auditorías
+master.menu.auditor.auditRecord.list.mine=Mis auditorías
 
 # master.menu.employer ########################################################
 master.menu.employer.application = Aplicaciones
-master.menu.employer.application.list = Listar aplicaciones
 
 # master.menu.consumer ##########################################################
 
-master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
 master.menu.anonymous.links=Enlace favorito
 master.menu.anonymous.favourite-link-alba= Enlace de Alba
@@ -81,16 +78,11 @@ master.menu.anonymous.favourite-link-alex=Enlace de Alejandro
 master.menu.anonymous.favourite-link-miguel=Enlace de Miguel
 master.menu.anonymous.announcements=Anuncios
 master.menu.offers = Ofertas
-master.menu.consumer.offer.create = Crear Ofertas
 
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
-master.menu.user-account.provider = Datos de proveedor
-master.menu.user-account.become-provider = Hazte proveedor
-master.menu.user-account.consumer = Datos de consumidor
-master.menu.user-account.become-consumer = Hazte consumidor
 master.menu.user-account.announcement = Anuncios
 master.menu.provider.request = Crear petición
 master.menu.storage.become-auditor = Hazte auditor
@@ -104,7 +96,7 @@ master.menu.authenticated=Autentificado
 master.menu.authenticated.offer=Ofertas
 master.menu.administrator.company-record=Company Record 
 master.menu.authenticated.challenge = Retos
-master.menu.authenticated.job = Trabajo
+master.menu.authenticated.job = Trabajos
 
 master.menu.employer = Empleado
 master.menu.worker = Trabajador
