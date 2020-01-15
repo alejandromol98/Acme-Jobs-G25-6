@@ -5,14 +5,13 @@ employer.job.form.label.deadline = Deadline
 employer.job.form.label.title = Title
 employer.job.form.label.finalMode = Final mode
 employer.job.form.label.referenceNumber = Reference number
-employer.job.form.label.duty = Duties
 employer.job.form.return=Return
-employer.job.form.error.deadline= We can not save in final mode, there is a problem in deadline.
-employer.job.form.error.dutisSpam= We can not save in final mode, there is a spam word in the dutis.
-employer.job.form.error.description= We can not save in final mode, there is a spam word in the description.
-employer.job.form.error.title= We can not save in final mode, there is a spam word in the title.
-employer.job.form.error.moreInfo= We can not save in final mode, there is a spam word in more info.
-employer.job.form.error.dutisporcentaje= We can not save in final mode, dutis' % not 100.
+employer.job.form.error.deadline= We can not save in final mode, there is a problem in deadline
+employer.job.form.error.dutisSpam= We can not save in final mode, there is a spam word in the dutis
+employer.job.form.error.description= We can not save in final mode, there is a spam word in the description
+employer.job.form.error.title= We can not save in final mode, there is a spam word in the title
+employer.job.form.error.moreInfo= We can not save in final mode, there is a spam word in more info
+employer.job.form.error.dutisporcentaje= We can not save in final mode, dutis' % not 100
 
 employer.job.list.label.moreInfo = More info	
 employer.job.list.label.description = Description
@@ -21,11 +20,11 @@ employer.job.list.label.deadline = Deadline
 employer.job.list.label.title = Title
 employer.job.list.label.finalMode = Final mode
 employer.job.list.label.referenceNumber = Reference number
-employer.job.form.label.duty = Duty
+employer.job.form.label.duty = List duties
 
 employer.job.form.button.create=Create
 employer.job.form.button.update = Update
 employer.job.form.button.delete = Delete
 
-employer.job.form.error.reference = There is a/some application/s! You can not delete.
+employer.job.form.error.reference = There is a/some application/s! You can not delete
 employer.job.form.error.finalMode = You can not save this in Final mode

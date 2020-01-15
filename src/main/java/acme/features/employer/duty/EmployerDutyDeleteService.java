@@ -1,3 +1,4 @@
+
 package acme.features.employer.duty;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +17,9 @@ public class EmployerDutyDeleteService implements AbstractDeleteService<Employer
 	@Autowired
 	EmployerDutyRepository repository;
 
+
 	@Override
-	public boolean authorise(Request<Duty> request) {
+	public boolean authorise(final Request<Duty> request) {
 		// TODO Auto-generated method stub
 		assert request != null;
 
@@ -25,26 +27,26 @@ public class EmployerDutyDeleteService implements AbstractDeleteService<Employer
 	}
 
 	@Override
-	public void bind(Request<Duty> request, Duty entity, Errors errors) {
+	public void bind(final Request<Duty> request, final Duty entity, final Errors errors) {
 		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		request.bind(entity, errors, "title");
+		request.bind(entity, errors);
 	}
 
 	@Override
-	public void unbind(Request<Duty> request, Duty entity, Model model) {
+	public void unbind(final Request<Duty> request, final Duty entity, final Model model) {
 		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		
-		request.unbind(entity, model, "title", "description", "percentage", "job.title");
+
+		request.unbind(entity, model, "title", "description", "percentage");
 	}
 
 	@Override
-	public Duty findOne(Request<Duty> request) {
+	public Duty findOne(final Request<Duty> request) {
 		// TODO Auto-generated method stub
 		assert request != null;
 
@@ -58,7 +60,7 @@ public class EmployerDutyDeleteService implements AbstractDeleteService<Employer
 	}
 
 	@Override
-	public void validate(Request<Duty> request, Duty entity, Errors errors) {
+	public void validate(final Request<Duty> request, final Duty entity, final Errors errors) {
 		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;
@@ -66,7 +68,7 @@ public class EmployerDutyDeleteService implements AbstractDeleteService<Employer
 	}
 
 	@Override
-	public void delete(Request<Duty> request, Duty entity) {
+	public void delete(final Request<Duty> request, final Duty entity) {
 		// TODO Auto-generated method stub
 		assert request != null;
 		assert entity != null;

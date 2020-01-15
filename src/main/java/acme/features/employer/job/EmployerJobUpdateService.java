@@ -90,7 +90,6 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		Job j;
 		Customisation c;
 		Boolean isValid = true;
 		Boolean isValid2 = true;
@@ -100,7 +99,6 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		Boolean isValid6 = true;
 
 		Integer jobId = request.getModel().getInteger("id");
-		j = this.employerJobRepository.findOneById(jobId);
 		Calendar cal = Calendar.getInstance();
 		Date dateNow = cal.getTime();
 
@@ -124,22 +122,22 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 						}
 					}
 				}
-				if (j.getDeadline().before(dateNow)) {
+				if (entity.getDeadline().before(dateNow)) {
 					isValid2 = false;
 					errors.state(request, isValid2, "deadline", "employer.job.form.error.deadline");
 
 				}
-				if (j.getDescription() != null) {
+				if (entity.getDescription() != null) {
 					for (String parte : partes) {
-						if (j.getDescription().contains(parte)) {
+						if (entity.getDescription().contains(parte)) {
 							isValid3 = false;
 							errors.state(request, isValid3, "description", "employer.job.form.error.description");
 						}
-						if (j.getTitle().contains(parte)) {
+						if (entity.getTitle().contains(parte)) {
 							isValid4 = false;
 							errors.state(request, isValid4, "title", "employer.job.form.error.title");
 						}
-						if (j.getMoreInfo().contains(parte)) {
+						if (entity.getMoreInfo().contains(parte)) {
 							isValid5 = false;
 							errors.state(request, isValid5, "title", "employer.job.form.error.moreInfo");
 

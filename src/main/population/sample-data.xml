@@ -228,7 +228,7 @@
 
 	<!-- Customisation -->
 	<bean id="customisation" class="acme.entities.customisations.Customisation">
-		<property name="customisations" value="sex, hard core, viagra, cialis,  nigeria, you’ve won, million dollar,sexo, hard core, viagra, cialis,  nigeria, has ganado, millon dolares" />
+		<property name="customisations" value="sex,hard core,viagra,cialis,nigeria,you’ve won,million dollar,sexo,has ganado,millon dolares" />
 		<property name="threshold" value="1" />
 	</bean>
 
@@ -275,66 +275,6 @@
 		<property name="studies" value="Chemistry" />
 		<property name="moment" value="2019/05/31 18:00" />
 
-	</bean>
-
-	<!-- Provider -->
-	<bean name="providerUserAccount" class="acme.framework.entities.UserAccount">
-		<property name="username" value="provider" />
-		<property name="password" value="provider" />
-		<property name="enabled" value="true" />
-		<property name="identity">
-			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Provider" />
-				<property name="surname" value="Acme.com" />
-				<property name="email" value="provider@acme.com" />
-			</bean>
-		</property>
-		<property name="roles">
-			<list>
-				<ref bean="providerProvider" />
-				<ref bean="providerAuthenticated" />
-			</list>
-		</property>
-	</bean>
-
-	<bean name="providerProvider" class="acme.entities.roles.Provider">
-		<property name="company" value="company" />
-		<property name="sector" value="sector" />
-		<property name="userAccount" ref="providerUserAccount" />
-	</bean>
-
-	<bean name="providerAuthenticated" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="providerUserAccount" />
-	</bean>
-
-	<!-- Consumer -->
-	<bean name="consumerUserAccount" class="acme.framework.entities.UserAccount">
-		<property name="username" value="consumer" />
-		<property name="password" value="consumer" />
-		<property name="enabled" value="true" />
-		<property name="identity">
-			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Consumer" />
-				<property name="surname" value="Acme.com" />
-				<property name="email" value="consumer@acme.com" />
-			</bean>
-		</property>
-		<property name="roles">
-			<list>
-				<ref bean="consumerConsumer" />
-				<ref bean="consumerAuthenticated" />
-			</list>
-		</property>
-	</bean>
-
-	<bean name="consumerConsumer" class="acme.entities.roles.Consumer">
-		<property name="company" value="company" />
-		<property name="sector" value="sector" />
-		<property name="userAccount" ref="consumerUserAccount" />
-	</bean>
-
-	<bean name="consumerAuthenticated" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="consumerUserAccount" />
 	</bean>
 	
 	<!-- MessageThreads -->
