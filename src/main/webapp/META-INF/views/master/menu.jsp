@@ -88,8 +88,8 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
-			<acme:menu-suboption code="master.menu.auditor.auditRecord.list" action="/auditor/job/list" />
-			<acme:menu-suboption code="master.menu.auditor.auditRecord.list.mine" action="/auditor/job/list-mine" />
+			<acme:menu-suboption code="master.menu.auditor.auditRecord.job.list" action="/auditor/job/list" />
+			<acme:menu-suboption code="master.menu.auditor.auditRecord.list" action="/auditor/audit-record/list-mine" />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">

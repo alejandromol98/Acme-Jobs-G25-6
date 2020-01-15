@@ -15,4 +15,5 @@ auditor.auditRecord.form.label.job = Job
 
 auditor.auditRecord.form.button.create = Create AuditRecord
 
-auditor.auditRecord.button.return = Return
+auditor.auditRecord.form.return = Return
+auditor.auditRecord.form.button.update = Update

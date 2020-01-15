@@ -21,12 +21,15 @@ public interface AuditorAuditRecordRepository extends AbstractRepository {
 	AuditRecord findOneById(int id);
 
 	@Query("select j.finalMode from Job j where j.id=?1")
-	Boolean IsJobFinalMode(int jobId);
+	Boolean isJobFinalMode(int jobId);
 
 	@Query("select j from Job j where j.id=?1")
 	Job findJobById(int jobId);
 
 	@Query("select au from Auditor au where au.userAccount.id=?1")
 	Auditor findAuditorById(int auditorId);
+
+	@Query("select a from AuditRecord a where a.auditor.id = ?1")
+	Collection<AuditRecord> findAllByAuditorId(int id);
 
 }

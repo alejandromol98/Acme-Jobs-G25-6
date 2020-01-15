@@ -16,5 +16,5 @@
 	
 	<acme:form-submit code="auditor.job.form.label.auditRecord" method="get" action="/auditor/audit-record/list?id=${id}"/>
 	<acme:form-submit test="${command == 'show'}" method = "get" code="auditor.auditRecord.form.button.create" action="/auditor/audit-record/create?jobId=${id}" />
-	<acme:form-return code="auditor.auditRecord.button.return"/>
+	<acme:form-return code="auditor.job.form.return"/>
 </acme:form>

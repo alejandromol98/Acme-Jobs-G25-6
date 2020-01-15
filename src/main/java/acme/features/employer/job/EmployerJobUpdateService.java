@@ -103,7 +103,7 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		j = this.employerJobRepository.findOneById(jobId);
 		Calendar cal = Calendar.getInstance();
 		Date dateNow = cal.getTime();
-		
+
 		if (entity.getId() != 0) {
 
 			if (entity.isFinalMode() == true) {
@@ -115,10 +115,9 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 				List<Duty> dutis = new ArrayList<>(dutties);
 				for (int i = 0; i < dutis.size(); i++) {
 					porcentaje += dutis.get(i).getPercentage();
-				}
-				if (j.getDescription() != null & porcentaje == 100) {
+
 					for (String parte : partes) {
-						if (j.getDescription().contains(parte) || j.getTitle().contains(parte) || j.getMoreInfo().contains(parte)) {// falta spam
+						if (dutis.get(i).getTitle().contains(parte) || dutis.get(i).getDescription().contains(parte)) {
 							isValid = false;
 							errors.state(request, isValid, "finalMode", "employer.job.form.error.dutisSpam");
 
@@ -146,8 +145,9 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 
 						}
 					}
-				} if(porcentaje!=100){
-					isValid6=false;
+				}
+				if (porcentaje != 100) {
+					isValid6 = false;
 					errors.state(request, isValid6, "finalMode", "employer.job.form.error.dutisporcentaje");
 
 				}

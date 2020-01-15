@@ -15,5 +15,5 @@ auditor.auditRecord.form.label.job = Trabajo
 
 auditor.auditRecord.form.button.create = Crear registro de auditoría
 
-auditor.auditRecord.button.return = Volver
-
+auditor.auditRecord.form.return = Volver
+auditor.auditRecord.form.button.update = Actualizar

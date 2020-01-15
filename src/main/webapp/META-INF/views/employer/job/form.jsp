@@ -24,12 +24,12 @@
 
 
 	<jstl:if test="${command !='create'}">
-				<acme:form-submit code="employer.job.form.label.duty" method="get" action="/employer/duty/list?id=${id}" />
+		<acme:form-submit code="employer.job.form.label.duty" method="get" action="/employer/duty/list?id=${id}" />
 
 		<jstl:if test="${finalMode == false}">
 			<acme:form-submit code="employer.job.form.label.dutyCreate" method="get" action="/employer/duty/create?id=${id}" />
-			<acme:form-submit test="${command =='show'}" code="employer.job.form.button.delete" action="/employer/job/delete/" />
 		</jstl:if>
+		<acme:form-submit test="${command =='show'}" code="employer.job.form.button.delete" action="/employer/job/delete/" />
 	</jstl:if>
 
 

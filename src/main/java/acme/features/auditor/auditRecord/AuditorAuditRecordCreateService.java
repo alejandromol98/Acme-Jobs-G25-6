@@ -40,7 +40,7 @@ public class AuditorAuditRecordCreateService implements AbstractCreateService<Au
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "moment");
+		request.bind(entity, errors, "job.title", "auditor.authorityName", "moment");
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class AuditorAuditRecordCreateService implements AbstractCreateService<Au
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "moment", "status", "title", "body");
+		request.unbind(entity, model, "title", "body", "status");
 		model.setAttribute("jobId", entity.getJob().getId());
 	}
 

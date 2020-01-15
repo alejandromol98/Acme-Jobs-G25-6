@@ -62,11 +62,11 @@ master.menu.worker.application = Mis aplicaciones
 master.menu.worker.application.list = Listar aplicaciones
 master.menu.employer.job= Mis trabajos
 master.menu.employer.job.create = Crear Trabajo
-master.menu.auditor.auditRecord.list = Auditorías
-master.menu.auditor.auditRecord.list.mine=Mis auditorías
+master.menu.auditor.auditRecord.list = Mis auditorías
+master.menu.auditor.auditRecord.job.list= Trabajos para auditorías
 
 # master.menu.employer ########################################################
-master.menu.employer.application = Aplicaciones
+master.menu.employer.application = Aplicaciones a mis trabajos
 
 # master.menu.consumer ##########################################################
 
@@ -96,7 +96,7 @@ master.menu.authenticated=Autentificado
 master.menu.authenticated.offer=Ofertas
 master.menu.administrator.company-record=Company Record 
 master.menu.authenticated.challenge = Retos
-master.menu.authenticated.job = Trabajos
+master.menu.authenticated.job = Trabajos activos
 
 master.menu.employer = Empleado
 master.menu.worker = Trabajador

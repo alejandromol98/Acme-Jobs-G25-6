@@ -55,15 +55,15 @@ master.menu.provider = Provider
 master.menu.provider.favourite-link = Favourite link
 master.menu.requests = Requests
 master.menu.provider.request.create = Create Requests
-master.menu.authenticated.job = Jobs
+master.menu.authenticated.job = Active jobs
 
 # master.menu.worker ########################################################
 master.menu.worker.application = My Applications
-master.menu.auditor.auditRecord.list = Auditors
-master.menu.auditor.auditRecord.list.mine=My auditors
+master.menu.auditor.auditRecord.list = My audit records
+master.menu.auditor.auditRecord.job.list= Jobs for auditors
 
 # master.menu.employer ########################################################
-master.menu.employer.application = Applications
+master.menu.employer.application = Applications to my jobs
 master.menu.employer.job.create = Create Job
 
 # master.menu.consumer ##########################################################

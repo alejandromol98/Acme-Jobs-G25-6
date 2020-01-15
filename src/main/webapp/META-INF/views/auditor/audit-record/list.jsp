@@ -10,5 +10,5 @@
 </acme:list>
 	
 <acme:form>
-	<acme:form-return code="auditor.auditRecord.button.return"/>
+	<acme:form-return code="auditor.auditRecord.form.return"/>
 </acme:form>

@@ -10,10 +10,11 @@ import acme.entities.auditRecords.AuditRecord;
 import acme.entities.roles.Auditor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuditorAuditRecordListService implements AbstractListService<Auditor, AuditRecord> {
+public class AuditorAuditRecordListMineService implements AbstractListService<Auditor, AuditRecord> {
 
 	@Autowired
 	AuditorAuditRecordRepository repository;
@@ -31,9 +32,9 @@ public class AuditorAuditRecordListService implements AbstractListService<Audito
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		int jobId = request.getModel().getInteger("id");
+		//		int jobId = request.getModel().getInteger("id");
 
-		model.setAttribute("jobId", jobId);
+		//		model.setAttribute("jobId", jobId);
 		request.unbind(entity, model, "moment", "status", "auditor.authorityName", "title");
 
 	}
@@ -43,10 +44,12 @@ public class AuditorAuditRecordListService implements AbstractListService<Audito
 		assert request != null;
 
 		Collection<AuditRecord> result;
-		//		Principal principal = request.getPrincipal();
-		int id = request.getModel().getInteger("id");
+		Principal principal;
+		principal = request.getPrincipal();
 
-		result = this.repository.findAuditRecordsByJob(id);
+		int auditorId = principal.getActiveRoleId();
+
+		result = this.repository.findAllByAuditorId(auditorId);
 
 		return result;
 	}
