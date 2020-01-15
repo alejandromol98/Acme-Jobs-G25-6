@@ -42,11 +42,16 @@
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.customisations" action="/administrator/customisation/update" />
 			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown" />
+		</acme:menu-option>
+
+		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
+
 			<acme:menu-suboption code="master.menu.user-account.announcement" action="/administrator/announcement/list" />
 			<acme:menu-suboption code="master.menu.administrator.announcement.create" action="/administrator/announcement/create" />
 			<acme:menu-separator />
-			<acme:menu-suboption code="master.menu.administrator.auditor.list" action="/administrator/storage/list"/>
-			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.auditor.list" action="/administrator/storage/list" />
+			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.authenticated.challenge" action="/authenticated/challenge/list" />
 			<acme:menu-suboption code="master.menu.administrator.challenge.create" action="/administrator/challenge/create" />
 			<acme:menu-separator />
@@ -61,11 +66,9 @@
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.anonymous.company-record" action="/authenticated/company-record/list" />
 			<acme:menu-suboption code="master.menu.administrator.company-record.create" action="/administrator/company-record/create" />
-			<acme:menu-separator />
-			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown" />
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()&& !hasRole('Administrator')">
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.anonymous.company-record" action="/authenticated/company-record/list" />
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.authenticated.request" action="/authenticated/request/list" />
@@ -84,13 +87,6 @@
 			<acme:menu-suboption code="master.menu.authenticated.messageThread.create" action="/authenticated/message-thread/create" />
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
-			<acme:menu-suboption code="master.menu.consumer.offer.create" action="/authenticated/offer/create" />
-		</acme:menu-option>
-		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
-			<acme:menu-suboption code="master.menu.provider.request.create" action="/authenticated/request/create" />
-		</acme:menu-option>
-
 		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
 			<acme:menu-suboption code="master.menu.auditor.auditRecord.list" action="/auditor/job/list" />
 			<acme:menu-suboption code="master.menu.auditor.auditRecord.list.mine" action="/auditor/job/list-mine" />
@@ -105,7 +101,7 @@
 			<acme:menu-suboption code="master.menu.employer.job.create" action="/employer/job/create" />
 
 			<acme:menu-separator />
-			<acme:menu-suboption code="master.menu.worker.application" action="/employer/application/list-mine" />
+			<acme:menu-suboption code="master.menu.employer.application" action="/employer/application/list-mine" />
 		</acme:menu-option>
 	</acme:menu-left>
 
@@ -115,14 +111,6 @@
 
 		<acme:menu-option code="master.menu.user-account" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.user-account.general-data" action="/authenticated/user-account/update" />
-			<acme:menu-suboption code="master.menu.user-account.become-provider" action="/authenticated/provider/create"
-				access="!hasRole('Provider')" />
-			<acme:menu-suboption code="master.menu.user-account.provider" action="/authenticated/provider/update"
-				access="hasRole('Provider')" />
-			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create"
-				access="!hasRole('Consumer')" />
-			<acme:menu-suboption code="master.menu.user-account.consumer" action="/authenticated/consumer/update"
-				access="hasRole('Consumer')" />
 			<acme:menu-suboption code="master.menu.storage.become-auditor" action="/authenticated/storage/create" access="!hasRole('Auditor')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-worker" action="/authenticated/worker/create"
 				access="!hasRole('Worker')" />

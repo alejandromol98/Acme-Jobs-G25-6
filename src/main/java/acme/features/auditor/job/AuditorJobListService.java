@@ -1,6 +1,9 @@
+
 package acme.features.auditor.job;
 
+import java.util.Calendar;
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,6 +21,7 @@ public class AuditorJobListService implements AbstractListService<Auditor, Job> 
 
 	@Autowired
 	AuditorJobRepository repository;
+
 
 	@Override
 	public boolean authorise(final Request<Job> request) {
@@ -39,7 +43,12 @@ public class AuditorJobListService implements AbstractListService<Auditor, Job> 
 	public Collection<Job> findMany(final Request<Job> request) {
 		assert request != null;
 		Collection<Job> result;
-		result = this.repository.findManyJobs();
+		Calendar cal = Calendar.getInstance();
+		Date dateNow = cal.getTime();
+
+		result = this.repository.findManyByTime(dateNow);
+		result.removeAll(this.repository.findManyJobs(false));
+
 		return result;
 	}
 }

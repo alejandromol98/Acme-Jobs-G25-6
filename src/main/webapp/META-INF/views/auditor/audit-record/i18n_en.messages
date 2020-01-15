@@ -13,6 +13,6 @@ auditor.auditRecord.form.label.body = Text
 auditor.auditRecord.form.label.auditor = Auditor
 auditor.auditRecord.form.label.job = Job
 
-auditor.auditRecord.form.button.create = Create
+auditor.auditRecord.form.button.create = Create AuditRecord
 
 auditor.auditRecord.button.return = Return

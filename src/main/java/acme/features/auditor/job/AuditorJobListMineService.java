@@ -40,15 +40,13 @@ public class AuditorJobListMineService implements AbstractListService<Auditor, J
 
 	@Override
 	public Collection<Job> findMany(final Request<Job> request) {
+
 		assert request != null;
-
-		Collection<Job> result;
-
 		Principal principal;
-
 		principal = request.getPrincipal();
+		Collection<Job> result;
+		result = this.repository.findJobsByAuditor(true, principal.getActiveRoleId());
 
-		result = this.repository.findJobsByAuditor(principal.getActiveRoleId());
 		return result;
 
 	}
