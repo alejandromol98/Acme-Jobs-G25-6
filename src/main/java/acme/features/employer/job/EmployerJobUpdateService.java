@@ -25,13 +25,14 @@ import acme.framework.services.AbstractUpdateService;
 public class EmployerJobUpdateService implements AbstractUpdateService<Employer, Job> {
 
 	@Autowired
-	EmployerJobRepository employerJobRepository;
+	EmployerJobRepository					employerJobRepository;
 
 	@Autowired
-	EmployerDutyRepository employerDutyRepository;
+	EmployerDutyRepository					employerDutyRepository;
 
 	@Autowired
-	AdministratorCustomisationRepository customisationRepository;
+	AdministratorCustomisationRepository	customisationRepository;
+
 
 	@Override
 	public boolean authorise(final Request<Job> request) {
@@ -65,8 +66,7 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		if (j.isFinalMode()) {
 			request.unbind(entity, model);
 		} else {
-			request.unbind(entity, model, "referenceNumber", "title", "deadline", "finalMode", "salary", "description",
-					"moreInfo");
+			request.unbind(entity, model, "referenceNumber", "title", "deadline", "finalMode", "salary", "description", "moreInfo");
 		}
 	}
 
@@ -90,7 +90,6 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		Job j;
 		Customisation c;
 		Boolean isValid = true;
 		Boolean isValid2 = true;
@@ -100,10 +99,9 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		Boolean isValid6 = true;
 
 		Integer jobId = request.getModel().getInteger("id");
-		j = this.employerJobRepository.findOneById(jobId);
 		Calendar cal = Calendar.getInstance();
 		Date dateNow = cal.getTime();
-		
+
 		if (entity.getId() != 0) {
 
 			if (entity.isFinalMode() == true) {
@@ -115,7 +113,7 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 				List<Duty> dutis = new ArrayList<>(dutties);
 				for (int i = 0; i < dutis.size(); i++) {
 					porcentaje += dutis.get(i).getPercentage();
-					
+
 					for (String parte : partes) {
 						if (dutis.get(i).getTitle().contains(parte) || dutis.get(i).getDescription().contains(parte)) {
 							isValid = false;
@@ -124,29 +122,30 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 						}
 					}
 				}
-				if (j.getDeadline().before(dateNow)) {
+				if (entity.getDeadline().before(dateNow)) {
 					isValid2 = false;
 					errors.state(request, isValid2, "deadline", "employer.job.form.error.deadline");
 
 				}
-				if (j.getDescription() != null) {
+				if (entity.getDescription() != null) {
 					for (String parte : partes) {
-						if (j.getDescription().contains(parte)) {
+						if (entity.getDescription().contains(parte)) {
 							isValid3 = false;
 							errors.state(request, isValid3, "description", "employer.job.form.error.description");
 						}
-						if (j.getTitle().contains(parte)) {
+						if (entity.getTitle().contains(parte)) {
 							isValid4 = false;
 							errors.state(request, isValid4, "title", "employer.job.form.error.title");
 						}
-						if (j.getMoreInfo().contains(parte)) {
+						if (entity.getMoreInfo().contains(parte)) {
 							isValid5 = false;
 							errors.state(request, isValid5, "title", "employer.job.form.error.moreInfo");
 
 						}
 					}
-				} if(porcentaje!=100){
-					isValid6=false;
+				}
+				if (porcentaje != 100) {
+					isValid6 = false;
 					errors.state(request, isValid6, "finalMode", "employer.job.form.error.dutisporcentaje");
 
 				}

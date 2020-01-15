@@ -8,9 +8,12 @@ import acme.entities.storages.Storage;
 import acme.entities.storages.StorageStatus;
 import acme.features.administrator.auditor.AdministratorAuditorCreateService;
 import acme.framework.components.Errors;
+import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.components.Response;
 import acme.framework.entities.Administrator;
+import acme.framework.helpers.PrincipalHelper;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
@@ -78,4 +81,13 @@ public class AdministratorStorageUpdateService implements AbstractUpdateService<
 		this.repository.save(entity);
 	}
 
+	@Override
+	public void onSuccess(final Request<Storage> request, final Response<Storage> response) {
+		assert request != null;
+		assert response != null;
+
+		if (request.isMethod(HttpMethod.POST)) {
+			PrincipalHelper.handleUpdate();
+		}
+	}
 }

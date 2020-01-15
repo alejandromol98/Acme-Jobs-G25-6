@@ -5,20 +5,19 @@
 
 <acme:form>
 	<jstl:if test="${command !='create'}">
-	<acme:form readonly="true">
-	<acme:form-textbox code="employer.duty.form.label.title" path="title" />
-	<acme:form-textbox code="employer.duty.form.label.description" path="description" />
-	<acme:form-textbox code="employer.duty.form.label.percentage" path="percentage" />
-	</acme:form>
-</jstl:if>
-	<acme:form-submit test="${command == 'show'}" code="employer.job.form.button.delete" action="/employer/duty/delete/" />
+		<acme:form-textbox code="employer.duty.form.label.title" path="title" />
+		<acme:form-textbox code="employer.duty.form.label.description" path="description" />
+		<acme:form-textbox code="employer.duty.form.label.percentage" path="percentage" />
+	</jstl:if>
 
 	<jstl:if test="${command =='create'}">
-	<acme:form-textbox code="employer.duty.form.label.title" path="title" />
-	<acme:form-textbox code="employer.duty.form.label.description" path="description" />
-	<acme:form-textbox code="employer.duty.form.label.percentage" path="percentage" />
+		<acme:form-textbox code="employer.duty.form.label.title" path="title" />
+		<acme:form-textbox code="employer.duty.form.label.description" path="description" />
+		<acme:form-textbox code="employer.duty.form.label.percentage" path="percentage" />
 		<acme:form-submit test="${command == 'create'}" code="employer.duty.form.button.create" action="/employer/duty/create/" />
 	</jstl:if>
+
+	<acme:form-submit test="${command == 'show'}" code="employer.job.form.button.delete" action="/employer/duty/delete/" />
 	<acme:form-return code="employer.duty.form.return" />
 
 </acme:form>

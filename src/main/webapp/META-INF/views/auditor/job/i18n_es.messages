@@ -15,3 +15,4 @@ auditor.job.list.label.finalMode = Modo
 auditor.job.list.label.referenceNumber = Número de referencia
 
 auditor.job.form.label.auditRecord = Registros de Auditoría
+auditor.job.form.return = Volver
